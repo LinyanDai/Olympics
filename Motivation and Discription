@@ -24,7 +24,12 @@ Game information:
 This dataset includes the information about game.The information stores in HTML.
 2.https://www.theguardian.com/sport/datablog/2012/jun/25/olympic-medal-winner-list- data.
 The dataset contains information about all medalists at the summer Olympic games by year, sport, discipline,
-gender and event between 1896 and 2008. The information stores in CSV form. 
+gender and event between 1896 and 2008. The information stores in CSV form.
+Olympic games host:
+https://en.wikipedia.org/wiki/List_of_Olympic_Games_host_cities
+This dataset includes the information about host countries.The information stores in HTML.
+List_of_participating_nations_at_the_Summer_Olympic_Games:
+https://en.wikipedia.org/wiki/List_of_participating_nations_at_the_Summer_Olympic_Games
 
 Assigned Job:
 Bingyu Wu: Data Handling, Schema Refine
