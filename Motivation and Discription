@@ -1,0 +1,26 @@
+Our motivation for this project is to have a general view over past olympics games. 
+We focus on the relationship between countries and games to figure out how a country's culture and value will influence a game
+and how those cultures and values reflect back onto the game.
+To ahiveve this goal, we collect relevant information about each year's game, including the moscot, the stadium, the theme song and so on.
+To make our project more fun, we are also going to build a schema which documents each olympic's anecdotes for case users want to know some interesting
+things about each olympics.
+
+As shown in our ER diagram, we connect athelets,Game and Events in a tenary relationship and all athelets should all
+participaite in the game as defined as an olympic atheltes. Each game has a landscape stadium and a theme song and the song and the stadium
+will be a weak entity that rely on the game. Also, countries could have either participate the game as well as hold the game and when 
+countries participate the game, the participate relationship will have attributes including how many golds, silver and bronze they won.
+Moscot: 
+http://www.topendsports.com/events/summer/mascots.htm
+This dataset includes the information about official moscots. The information stores in HTML.
+Theme Song:
+http://entertainment.time.com/2012/07/30/11-olympic-theme-songs-dissected/slide/all/
+This dataset includes the information about theme songs.The information stores in HTML.
+Stadium:
+https://en.wikipedia.org/wiki/List_of_Olympic_venues_in_athletics
+This dataset includes the information about stadiums.The information stores in HTML.
+Game information:
+1.http://databaseolympics.com/
+This dataset includes the information about game.The information stores in HTML.
+2.https://www.theguardian.com/sport/datablog/2012/jun/25/olympic-medal-winner-list- data.
+The dataset contains information about all medalists at the summer Olympic games by year, sport, discipline,
+gender and event between 1896 and 2008. The information stores in CSV form. 
