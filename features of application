@@ -1,0 +1,15 @@
+Our team intends to develop a website to show users related information, including countries, Olympic games, sport events, 
+as well as Olympic themes and mascots. In general, our application offers a variety of useful and interesting features:
+search for the host country of a specific Olympic game and the countries that participate in the game;
+search for the stadiums in the country for the Olympic game, and the specific use of them;
+search for the Olympic themes and mascots for a specific Olympic game; 
+search for a country's performance in a specific Olympic game, such as the number of medals and the rank of the country;
+search for the sports events in a specific Olympic game; 
+search for the interesting stories in a specific Olympic game; 
+sign in with google or facebook accounts.
+
+Additionally, several features might be implemented in the application given enough time: 
+after signing in, users can rate the Olympic themes and mascots and make comments on them;
+realize the view-based access control over the dataset;
+add streaming data;
+trigger Bing Search.
