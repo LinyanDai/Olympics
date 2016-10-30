@@ -13,3 +13,12 @@ after signing in, users can rate the Olympic themes and mascots and make comment
 realize the view-based access control over the dataset;
 add streaming data;
 trigger Bing Search.
+
+noSQL: In order to show interesting stories of a specific Olympic game, we plan to store the stories in noSQL format.
+Our initial format is show as follows:
+{"_id": 1
+ "Game_Year": 1996
+ "Tag":[***,***,****]
+ "Title": *****
+ "Contents": ***************
+ }
