@@ -9,6 +9,7 @@ As shown in our ER diagram, we connect athelets,Game and Events in a tenary rela
 participaite in the game as defined as an olympic atheltes. Each game has a landscape stadium and a theme song and the song and the stadium
 will be a weak entity that rely on the game. Also, countries could have either participate the game as well as hold the game and when 
 countries participate the game, the participate relationship will have attributes including how many golds, silver and bronze they won.
+
 Moscot: 
 http://www.topendsports.com/events/summer/mascots.htm
 This dataset includes the information about official moscots. The information stores in HTML.
@@ -24,3 +25,8 @@ This dataset includes the information about game.The information stores in HTML.
 2.https://www.theguardian.com/sport/datablog/2012/jun/25/olympic-medal-winner-list- data.
 The dataset contains information about all medalists at the summer Olympic games by year, sport, discipline,
 gender and event between 1896 and 2008. The information stores in CSV form. 
+
+Assigned Job:
+Bingyu Wu: Data Handling, Schema Refine
+Linyan Dai:Design Webpage, 
+Tingyu Geng: Design Webpage, Data Handling
