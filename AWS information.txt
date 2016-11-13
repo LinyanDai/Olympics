@@ -1,0 +1,7 @@
+AWS
+username: group11
+password: cis550project
+
+
+Hostname and port:
+olympics.caxfxzsga7pz.us-east-1.rds.amazonaws.com:3306
