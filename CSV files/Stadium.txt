@@ -1,0 +1,60 @@
+﻿1896	  Marathon (city)	 Cycling (Individual road race)
+1896	  Panathenaic Stadium	 Gymnastics/Weightlifting/Wrestling
+1900	  Croix-Catelan Stadium	 None
+1904	  Francis Field	 Archery/Cycling/ Football/Gymnastics/Lacrosse/Roque/Tennis/Tug of war/Weightlifting/Wrestling
+1908	  White City Stadium	 Archery/Cycling (track) /Diving/Field hockey/Football/Gymnastics/Lacrosse/Rugby union/Swimming/Tug of war/Water polo (final) /Wrestling
+1912	  Stockholm Olympic Stadium	 Equestrian/Football (final) /Gymnastics/Modern pentathlon (running) /Tug of war/Wrestling
+1920	  Olympisch Stadion	 Equestrian/Field hockey/Football(final) /Gymnastics/Modern pentathlon/Rugby union/Tug of war/Weightlifing
+1924	  Stade de Colombes	 Cycling (road) /Equestrian/Fencing/Football (final) /Gymnastics/Modern pentathlon (fencing, running) /Rugby union/Tennis
+1928	  Olympic Stadium	 Cycling (track) /Equestrian (jumping) /Football (final) /Gymnastics
+1932	  Olympic Stadium	 Equestrian (eventing/jumping) /Field hockey/Gymnastics
+1932	  Riverside Drive at Griffith Park	 None
+1936	  Avus Motor Road	 Cycling (road)
+1936	  Olympic Stadium	 Equestrian (jumping) /Football (final) /Handball (final)
+1948	  Empire Stadium	 Equestrian (jumping) /Field hockey (medal matches) /Football (medal matches)
+1952	  Olympic Stadium	 Equestrian (jumping) /Football (final)
+1956	  Melbourne Cricket Ground	 Field hockey (final) /Football (final)
+1960	  Arch of Constantine	 None
+1960	  Raccordo Anulare	 None
+1960	  Stadio Olimpico	 Non-road
+1960	  Via Appia Antica	 None
+1960	  Via Cristoforo Colombo	 Cycling (road team time trial)
+1964	  Fuchu City	 None
+1964	  Karasuyama-machi	  None
+1964	  National Stadium	 Equestrian (team jumping) /Football (final)
+1964	  Sasazuka-machi	 None
+1964	  Shinjuku	 None
+1968	  Estadio Olímpico Universitario	Ceremonies (opening/closing) /Equestrian (jumping team)
+1968	  Zócalo	 None
+1972	  Olympiastadion	 Ceremonies (opening/closing) /Equestrian (jumping team) /Football (final) /Modern pentathlon (running)
+1976	  Montreal Botanical Garden	 Modern pentathlon (running)
+1976	  Olympic Stadium	 Ceremonies (opening/closing) /Equestrian (jumping team final) /Football (final)
+1976	  Streets of Montreal	 None
+1980	  Grand Arena	 Equestrian (jumping individual) /Football (final) /Opening/closing ceremonies
+1980	  Streets of Moscow	 None
+1984	  Los Angeles Memorial Coliseum	 Ceremonies (opening/closing)
+1984	  Santa Monica College	 None
+1984	  Streets of Los Angeles	 None
+1984	  Streets of Santa Monica	  None
+1988	  Olympic Stadium	 Equestrian (jumping individual final) /Football (final)
+1988	  Streets of Seoul	 None
+1992	  Estadi Olímpic de Monjuïc	 Ceremonies (opening/closing)
+1992	  Marathon course	None
+1992	  Mataró	 None
+1992	  Walking course	 None
+1996	  Marathon course	 None
+1996	  Olympic Stadium	 Ceremonies (opening/closing)
+1996	  Walking course	 Athletics (walks)
+2000	  Marathon course	 None
+2000	  North Sydney	None
+2000	  Olympic Stadium	 Ceremonies (opening/closing) /Football (final)
+2004	  Marathon (city)	 None
+2004	  Olympic Stadium	 Ceremonies (opening/closing) /Football (final)
+2004	  Panathenaic Stadium	 Archery
+2004	  Stadium at Olympia	 None
+2008	  Beijing National Stadium	 Beijing National Stadium: Football (final) /Ceremonies (opening/closing)
+2012	  Marathon Course	 None
+2012	  Olympic Stadium	 Ceremonies (opening/closing)
+2016	  Pontal	 Cycling (time trial)
+2016	  Estádio Olímpico Jo_o Havelange	 Football; Sambódromo
+2016	  Sambódromo	 Archery
