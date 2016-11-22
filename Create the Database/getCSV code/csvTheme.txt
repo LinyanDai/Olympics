@@ -1,0 +1,50 @@
+package dataBase_MileStone3;
+
+import java.io.FileWriter;
+import java.io.IOException;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
+
+public class DataProcess {
+
+	public DataProcess() {
+		// TODO Auto-generated constructor stub
+	}
+	public static String helper(String s){
+		String rst ="";
+		String[] step1 = s.split("¨C");
+		String singer = step1[0];
+		String[] step2 = (step1[1].trim()).split("¡±");
+
+		String song = step2[0].substring(1, step2[0].length());
+		
+		String[] step3 = (step2[1].trim().split(","));
+		String city = step3[0].substring(1, step3[0].length());
+	
+		String year = step3[1].trim().substring(0,  step3[1].length() - 2);
+		System.out.println(year);
+		return year + "," + city + "," + song + "," + singer + "\r\n";
+	}
+	public static void main(String[] args) {
+
+		try {
+			FileWriter fw = new FileWriter("ThemeSong.csv");
+			String header = "Year,City,NameofSong,NameOfSinger\r\n";
+			fw.write(header);
+			Document document = Jsoup.connect("http://entertainment.time.com/2012/07/30/11-olympic-theme-songs-dissected/slide/all/").get();
+			Elements liElements = document.getElementsByClass("items").get(0).getElementsByTag("li");
+//			StringBuffer str = new StringBuffer();
+			for (int i = 1; i < liElements.size(); i++) {
+//				str.append(helper());
+				String sb = helper(liElements.get(i).text());
+				fw.write(sb);
+				
+			}
+			fw.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+}

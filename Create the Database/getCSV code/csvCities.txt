@@ -1,0 +1,36 @@
+	public static void main(String[] args) {
+		try {
+			File file = new File("D:/hostCities.txt");
+			FileReader fr = new FileReader(file);
+			BufferedReader br = new BufferedReader(fr);
+			FileWriter fw = new FileWriter("D:\\HostCities.csv");
+			String first = br.readLine();
+			String[] title = first.split(",");
+			int x = title[0].indexOf(' ');
+			String s1 = title[0].substring(0, x).trim();
+			String s2 = title[0].substring(x+1).trim();
+			String s3 = title[1].trim();
+			
+			String header = "Host" + s1 +","+ s2  +","+ s3 + "\r\n";
+			//String header = "Host" + s1 + "\r\n";
+			fw.write(header);
+			String line = br.readLine();
+			while(line != null) {
+				title = line.split(",");
+				x = title[0].indexOf(' ');
+				s1 = title[0].substring(0, x).trim();
+				s2 = title[0].substring(x+1).trim();
+				s3 = title[1].trim() ;
+
+				String str = s1 +","+ s2  +","+ s3 + "\r\n";
+				fw.write(str);
+				//fw.write(s1+ "\r\n");
+				fw.flush();
+				line = br.readLine();
+			}
+			fw.close();
+			br.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}

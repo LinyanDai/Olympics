@@ -1,0 +1,60 @@
+package dataBase_MileStone3;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
+
+public class DataProcess {
+
+	public DataProcess() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static String helper(String s) {
+		String[] step1 = s.trim().split(":");
+		String year = step1[0];
+
+		String[] step2 = step1[1].trim().split(",");
+		StringBuilder sb = new StringBuilder();
+		for (int i = 0; i < step2.length; i++) {
+			sb.append("  " + step2[i].trim());
+		}
+		return year + "," + sb.toString() + "\r\n";
+	}
+
+	public static void main(String[] args) {
+
+		try {
+			File fw = new File("Stadium.csv");
+			byte[] bom = { (byte) 0xEF, (byte) 0xBB, (byte) 0xBF };
+			String header = "Year,Venue\r\n";
+			FileOutputStream stream = new FileOutputStream(fw);
+			stream.write(bom);
+			stream.write(header.getBytes());
+			Document document = Jsoup.connect("https://en.wikipedia.org/wiki/List_of_Olympic_venues_in_athletics")
+					.get();
+			Elements liElements = document.getElementsByClass("navbox-list navbox-odd hlist").get(1)
+					.getElementsByTag("li");
+			// StringBuffer str = new StringBuffer();
+			for (int i = 0; i < liElements.size(); i++) {
+				// str.append(helper());
+				String sb = helper(liElements.get(i).text());
+				byte[] b = sb.getBytes("UTF-8");
+				 stream.write((new String(sb.getBytes(), "utf-8")).getBytes());
+
+			}
+			stream.close();
+
+		} catch (
+		IOException e)
+
+		{
+			e.printStackTrace();
+		}
+	}
+}

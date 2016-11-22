@@ -1,0 +1,10 @@
+﻿1980,	Olimpiadas,	Tonis,	Magi, 	0
+1984,	Reach Out,	Giorgio Moroder (feat. Paul Engemann), 	Giorgio Moroder,	0
+1988,	Hand in Hand,	Koreana, 	Giorgio Moroder and Tom Whitlock,	0
+1992,	Barcelona,	Queen & Montserrat Caballé,	Freddie Mercury and Mike Moran,	0
+1996,	Reach,	Gloria Estefan, 	Diane Warren, 	0
+2000,	Flame,	Tina Arena,	No Information,	0
+2004,	Oceania,	Björk,	No Information,	0
+2008,	You & Me,	Liu Huan & Sarah Brightman, 	Chen Qigang,	0
+2012,	Survival,	Muse, 	Matthew Bellamy,	0
+2016,	Gods of Olympus Visit Rio de Janeiro,	Katy Perry,	Arlindo Cruz and Roge and Arlindo Neto,	0

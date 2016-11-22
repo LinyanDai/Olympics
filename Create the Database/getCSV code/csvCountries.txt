@@ -1,0 +1,29 @@
+public static void main(String[] args) {
+		try {
+			File file = new File("D:/countries.txt");
+			FileReader fr = new FileReader(file);
+			BufferedReader br = new BufferedReader(fr);
+			FileWriter fw = new FileWriter("D:\\Countries.csv");
+			  
+			String header = "Country,Capital City\r\n";
+			//String header = "Host" + s1 + "\r\n";
+			fw.write(header);
+			String line = br.readLine();
+			while(line != null) {
+				String s1 = line.trim();
+				line = br.readLine();
+				String s2 =line .trim();
+				String[] temp = s2.split(" ");
+				s2 = temp[0].trim();
+				String str = s1 +","+ s2  +"," + "\r\n";
+				fw.write(str);
+				//fw.write(s1+ "\r\n");
+				fw.flush();
+				line = br.readLine();
+			}
+			fw.close();
+			br.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}

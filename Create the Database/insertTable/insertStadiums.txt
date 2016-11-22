@@ -1,0 +1,74 @@
+import java.io.BufferedReader;
+import java.io.DataInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class MyDatabase {
+
+	public static void main(String[] args) {
+		try {
+			// install the driver for oracle database
+			// Class.forName("oracle.jdbc.driver.OracleDriver");
+			//
+			// String url =
+			// "jdbc:oracle:thin:@olympicsdatabase.caxfxzsga7pz.us-east-1.rds.amazonaws.com:1521:ORCL";
+			// String username = "group11";
+			// String password = "cis550project";
+
+			Class.forName("com.mysql.jdbc.Driver");
+			String url = "jdbc:mysql://olympics.caxfxzsga7pz.us-east-1.rds.amazonaws.com:3306";
+			String username = "group11";
+			String password = "cis550project";
+
+			Connection con = DriverManager.getConnection(url, username, password);
+			Statement stmt1 = con.createStatement();
+			String ss = "USE Olympics";
+			String sss = "DROP TABLE Stadiums";
+			String s = "CREATE TABLE Stadiums(\nYear INT,\nVenue VARCHAR(250),\nEvents VARCHAR(250),\nRating INT,\nReference VARCHAR(250),"+
+	"PRIMARY KEY(Year, Venue),\nFOREIGN KEY(Year) REFERENCES Games(HostYear))";
+			stmt1.executeUpdate(ss);
+			stmt1.executeUpdate(sss);
+			stmt1.executeUpdate(s);
+			//read in files
+			String csvFile = "D:/Stadium.txt";
+			File f = new File(csvFile);
+			
+			DataInputStream in = new DataInputStream(new FileInputStream(f));
+			BufferedReader br = new BufferedReader(new InputStreamReader(in, "UTF-8"));
+	        String line = "";
+	        line = br.readLine();
+	        int j = 0;
+	        while((line = br.readLine()) != null){
+	        	//System.out.println(line.length());
+	        	j++;
+	        	Statement stmt = con.createStatement();
+	        	String[] ele = line.split("\t");
+				String sql = "INSERT INTO Stadiums VALUES(" + ele[0].trim() + ", '" + ele[1].trim() + "', '" + ele[2].trim()+ "', " + 0 +  ", " + null +")";
+				System.out.println(j+ "  "+ sql);
+				stmt.executeUpdate(sql);
+	        }
+	        br.close();
+
+			System.out.println("Inserting Success!");
+		} catch (ClassNotFoundException e) {
+			System.out.println("Cannot find suitable driver!");
+			e.printStackTrace();
+		} catch (SQLException se) {
+			System.out.println("database error!");
+			se.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+}
