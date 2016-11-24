@@ -1,0 +1,95 @@
+// Jade file to specify output of a persons list
+// Inherits from layout
+extend layout
+
+var result1,result2,result3,result4;
+block navbarcontent
+  table
+    tbody
+      tr
+        td(height="17")
+      tr
+        td(width='200')
+          +nav_item("/") Hompage 
+        td(width='45')
+        td(width='200')
+          +nav_item("/","active") Login  
+        td(width='45')
+        td(width='200')
+          +nav_item("/reference") Contact Us
+block content
+  p
+    
+      table
+        tbody
+          tr
+            td(width='150')=result2[0].year
+            td(width='15')
+            td(width='150')=result2[0].city
+            td(width='15')
+            td(width='300')=result2[0].country
+          tr(height='30')
+          if(result1[0])
+            tr
+              td='Mascot:'
+            tr
+              td(width='150')
+                img(src=result1[0].Reference, alt=result1[0].Roles, width='150', height='200')
+              td(width='15')
+              td(width='50')="Name: "+result1[0].Name
+              td(width='15')
+              td(width='50')="Designer(s): "+result1[0].Designer
+              td(width='15')
+              td(width='100')="Character(s): "+result1[0].Roles
+              td(width='15')
+              td(width='500')="Significance: "+result1[0].Significance
+          tr(height='30')
+          tr
+              td='Stadiums:'
+          - for (var i=0; i < result3.length; i++)
+            tr
+              td(width='300')
+                img(src=result3[i].Reference, alt="The Image not found", width='300', height='200')
+              td(width='25')
+              td(width='100')=result3[i].Venue
+              td(width='25')
+              td(width='100')=result3[i].Events
+          tr(height='30')
+          tr
+              td='Medal List:'
+          tr
+            td(width='200')="Country"
+            td(width='15')
+            td(width='50')="Gold"
+            td(width='15')
+            td(width='50')="Silver"
+            td(width='15')
+            td(width='50')="Bronze"
+            td(width='15')
+            td(width='50')="Total"
+
+          - for (var i=0; i < result4.length; i++)
+            tr
+              td(width='150')=result4[i].country
+              td(width='15')
+              td(width='45')=result4[i].gold
+              td(width='15')
+              td(width='45')=result4[i].silver
+              td(width='15')
+              td(width='45')=result4[i].bronze
+              td(width='15')
+              td(width='45')=result4[i].medal
+
+
+   // +icon-primary("search")
+  //  |  #{title}:
+  // Create a table with one row per result
+ // form(method="get", action="/person")
+ // p
+   // select(name = "HostYear")
+    //  - for (var inx = 0; inx < results.length; inx++)
+     //   option #{results[inx].HostYear}
+          
+  // Put a click button that lets us return to the index page 
+ // form(method='get', action='/')
+      //input(type='submit', value='Return')
