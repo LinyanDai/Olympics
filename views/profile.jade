@@ -1,0 +1,21 @@
+// Jade file to specify output of a persons list
+// Inherits from layout
+extend layout
+block navbarcontent
+  table
+    tbody
+      tr
+        td(height="17")
+      tr
+        td(width='200')
+          +nav_item("/") Hompage 
+        td(width='45')
+        td(width='200')
+          +nav_item("/login","active") Login  
+        td(width='45')
+        td(width='200')
+          +nav_item("/reference") Contact Us
+block content
+  p
+    h5
+      | Success!

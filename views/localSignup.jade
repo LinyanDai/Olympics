@@ -1,0 +1,39 @@
+// Jade file to specify output of a persons list
+// Inherits from layout
+extend layout
+block navbarcontent
+  table
+    tbody
+      tr
+        td(height="17")
+      tr
+        td(width='200')
+          +nav_item("/") Hompage 
+        td(width='45')
+        td(width='200')
+          +nav_item("/login") Login  
+        td(width='45')
+        td(width='200')
+          +nav_item("/reference") Contact Us
+block content
+  p
+    h5
+      |  Signup
+    if message.length
+      .alert.alert-danger= message
+      form(action='/localSignup', method='post')
+        .form-group
+          label Email
+          input.form-control(type='text', name='email')
+        .form-group
+          label Password            
+          input.form-control(type='password', name='password')
+        button.btn.btn-warning.btn-lg(type='submit') Signup
+      hr
+      p
+        | Already have an account? 
+        a(href='/login') Login
+      p         
+        | Or go 
+        a(href='/') home
+        | .

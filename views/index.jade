@@ -1,0 +1,107 @@
+// Inherits from layout 
+extend layout
+// Then we produce a form that triggers /person once
+// the user hits Submit
+var result1,result2;
+block navbarcontent
+	table
+		tbody
+			tr(height = "17")
+			tr
+				td(width = "200")
+					+nav_item("/","active") Homepage
+				td(width = "45")
+				td(width = "200")
+					+nav_item("/login") Login
+				td(width = "45")
+				td(width = "200")
+					+nav_item("/reference") Contact Us
+block content
+	p
+	form(method="get", action="/")
+		table
+			tbody
+				tr
+					td
+						table
+							tbody
+								tr
+									td(width = '160')
+										img(src=result1[0].Reference, alt=result1[0].Roles, width='150', height='200')
+									td(width = '160')
+										img(src=result1[1].Reference, alt=result1[1].Roles, width='150', height='200')
+									td(width = '160')
+										img(src=result1[2].Reference, alt=result1[2].Roles, width='150', height='200')
+									td(width = '160')
+										img(src=result1[3].Reference, alt=result1[3].Roles, width='150', height='200')
+								tr 
+									td(width = '160')
+										form(method='get', action='/gameInfo')
+										form(method='get', action='/gameInfo')
+											input(type='submit', name='name', value=result1[0].Year, style="height:30px; width:150px")
+									td(width = '160')
+										form(method='get', action='/gameInfo')
+											input(type='submit', name='name', value=result1[1].Year, style="height:30px; width:150px")
+									td(width = '160')
+										form(method='get', action='/gameInfo')
+											input(type='submit', name='name', value=result1[2].Year, style="height:30px; width:150px")
+									td(width = '160')
+										form(method='get', action='/gameInfo')
+											input(type='submit', name='name', value=result1[3].Year, style="height:30px; width:150px")
+								tr(height = '10')
+								tr
+									td(width = '160')
+										img(src=result1[4].Reference, alt=result1[4].Roles, width='150', height='200')
+									td(width = '160')
+										img(src=result1[5].Reference, alt=result1[5].Roles, width='150', height='200')
+									td(width = '160')
+										img(src=result1[6].Reference, alt=result1[6].Roles, width='150', height='200')
+									td(width = '160')
+										img(src=result1[7].Reference, alt=result1[7].Roles, width='150', height='200')
+								tr
+									td(width = '160')
+										form(method='get', action='/gameInfo')
+											input(type='submit', name='name', value=result1[4].Year, style="height:30px; width:150px")
+									td(width = '160')
+										form(method='get', action='/gameInfo')
+											input(type='submit', name='name', value=result1[5].Year, style="height:30px; width:150px")
+									td(width = '160')
+										form(method='get', action='/gameInfo')
+											input(type='submit', name='name', value=result1[6].Year, style="height:30px; width:150px")
+									td(width = '160')
+										form(method='get', action='/gameInfo')
+											input(type='submit', name='name', value=result1[7].Year, style="height:30px; width:150px")
+								tr(height = '10')
+								tr
+									td(width = '160')
+										img(src=result1[8].Reference, alt=result1[8].Roles, width='150', height='200')
+									td(width = '160')
+										img(src=result1[9].Reference, alt=result1[9].Roles, width='150', height='200')
+									td(width = '160')
+										img(src=result1[10].Reference, alt=result1[10].Roles, width='150', height='200')
+									td(width = '160')
+										img(src=result1[11].Reference, alt=result1[11].Roles, width='150', height='200')
+								tr
+									td(width = '160')
+										form(method='get', action='/gameInfo')
+											input(type='submit', name='name', value=result1[8].Year, style="height:30px; width:150px")
+										
+									td(width = '160')
+										form(method='get', action='/gameInfo')
+											input(type='submit', name='name', value=result1[9].Year, style="height:30px; width:150px")
+									td(width = '160')
+										form(method='get', action='/gameInfo')
+											input(type='submit', name='name', value=result1[10].Year, style="height:30px; width:150px")
+									td(width = '160')
+										form(method='get', action='/gameInfo')
+											input(type='submit', name='name', value=result1[11].Year, style="height:30px; width:150px")
+					td(width="40")
+					td
+						table
+							tbody
+							- for (var i=0; i < result2.length; i++)
+								tr
+									td(width='300')
+										form(method='get', action='/gameInfo')
+										form(method='get', action='/gameInfo')
+											input(type='submit', name='name', value=result2[i].year+" "+result2[i].city+" "+result2[i].country, style="height:30px; width:250px")
