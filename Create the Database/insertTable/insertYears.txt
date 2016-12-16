@@ -15,13 +15,7 @@ public class MyDatabase {
 
 	public static void main(String[] args) {
 		try {
-			// install the driver for oracle database
-//			Class.forName("oracle.jdbc.driver.OracleDriver");
-//
-//			String url = "jdbc:oracle:thin:@olympicsdatabase.caxfxzsga7pz.us-east-1.rds.amazonaws.com:1521:ORCL";
-//			String username = "group11";
-//			String password = "cis550project";
-			
+			// install the driver for MYSQL database
 			Class.forName("com.mysql.jdbc.Driver");
 			String url = "jdbc:mysql://olympics.caxfxzsga7pz.us-east-1.rds.amazonaws.com:3306";
 			String username = "group11";
@@ -29,7 +23,7 @@ public class MyDatabase {
 
 			
 			Connection con = DriverManager.getConnection(url, username, password);
-			//read in files
+			//read in files and insert into tables
 			String csvFile = "D:/Games.csv";
 			BufferedReader br = new BufferedReader(new FileReader(csvFile));;
 	        String line = "";
@@ -50,7 +44,6 @@ public class MyDatabase {
 			System.out.println("database error!");
 			se.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
 
