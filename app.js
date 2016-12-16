@@ -12,7 +12,6 @@ var flash    = require('connect-flash');
 
 var rating = require('./routes/rating');
 var ratingResult = require('./routes/ratingResult');
-var users = require('./routes/users');
 var homepage = require('./routes/homepage');
 var gameInfo = require('./routes/gameInfo');
 var question = require('./routes/question');
