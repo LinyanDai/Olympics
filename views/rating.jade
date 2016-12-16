@@ -1,0 +1,49 @@
+// Jade file to specify output of the rating page
+// Inherits from layout 
+extend layout
+var result1,result2;
+block navbarcontent
+  table
+    tbody
+      tr
+        td(height="17")
+      tr
+        td(width='200')
+          +nav_item("/") Hompage 
+        td(width='45')
+        td(width='200')
+          +nav_item("/login") Login  
+        td(width='45')
+        td(width='200')
+          +nav_item("/question") Q & A
+block content
+  p
+  form(method="get", action="/ratingResult") 
+    p
+      h3 
+        | Please Choose A #{title}
+      select(name = "name")
+        - for (var inx = 0; inx < result1.length; inx++)
+          option #{result1[inx].Year}  #{result1[inx].Name}  #{result1[inx].year}  #{result1[inx].name}  #{result1[inx].Venue}
+      h4 
+        | From a scale of 1 to 5, how would you rate this #{title}?
+
+        li
+          input(type='radio', name='rate', value=title + '1')
+          |                            1      
+        li
+          input(type='radio', name='rate', value=title + '2')
+          |                            2          
+        li
+          input(type='radio', name='rate', value=title + '3')
+          |                            3
+        li 
+          input(type='radio', name='rate', value=title + '4')
+          |                            4
+        li 
+          input(type='radio', name='rate', value=title + '5')
+          |                            5 
+    input(type='submit', value='Submit')
+  form(method="get", action="/profile")
+    input(type='submit', value='Back') 
+

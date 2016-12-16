@@ -1,0 +1,69 @@
+// Jade file to specify output of the result after user gives a rating
+// Inherits from layout
+extend layout
+var result1;
+block navbarcontent
+  table
+    tbody
+      tr
+        td(height="17")
+      tr
+        td(width='200')
+          +nav_item("/") Hompage 
+        td(width='45')
+        td(width='200')
+          +nav_item("/login") Login  
+        td(width='45')
+        td(width='200')
+          +nav_item("/question") Q & A
+block content
+  p
+  form(method="get", action="/ratingResult")
+    if(title=="Mascot")
+      table
+        tbody
+        - for (var i=0; i < result1.length; i++)
+          tr
+            td(width = '160')
+              img(src=result1[i].Reference, alt=result1[i].Roles, width='150', height='200')
+            td(width = '20')
+            td(width = '100')=result1[i].Name
+            td(width = '20')
+            td(width='50')="Designer(s): "+result1[i].Designer
+            td(width='15')
+            td(width='100')="Character(s): "+result1[i].Roles
+            td(width='15')
+            td(width='500')="Significance: "+result1[i].Significance
+            td(width='15')
+            td(width='500')="Average Rating: "+result1[i].Rating
+    if(title=="Theme Song")
+      table
+        tbody
+        - for (var i=0; i < result1.length; i++)
+          tr
+            td(width = '160')=result1[i].year
+            td(width = '20')
+            td(width = '100')="Title: "+result1[i].name
+            td(width = '20')
+            td(width='50')="Singer: "+result1[i].singer
+            td(width='15')
+            td(width='100')="Composer: "+result1[i].composer
+            td(width='15')
+            td(width='500')="Average Rating: "+result1[i].rating
+    if(title=="Stadium")
+      table
+        tbody
+        - for (var i=0; i < result1.length; i++)
+          tr
+            td(width = '160')
+              img(src=result1[i].Reference, alt=result1[i].Roles, width='150', height='200')
+            td(width = '160')=result1[i].Year
+            td(width = '20')
+            td(width = '100')="Venue: "+result1[i].Venue
+            td(width = '20')
+            td(width='50')="Events: "+result1[i].Events
+            td(width='15')
+            td(width='500')="Average Rating: "+result1[i].Rating
+  form(method="get", action="/profile")
+    input(type='submit',value='Back') 
+        

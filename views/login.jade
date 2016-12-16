@@ -1,4 +1,4 @@
-// Jade file to specify output of a persons list
+// Jade file to specify output of login page
 // Inherits from layout
 extend layout
 block navbarcontent
@@ -14,29 +14,21 @@ block navbarcontent
           +nav_item("/login","active") Login  
         td(width='45')
         td(width='200')
-          +nav_item("/reference") Contact Us
+          +nav_item("/question") Q & A
 block content
   p
-    h1
-      span.fa.fa-lock
-      |  Node Authentication
-    p Login or Register with:
-      a.btn.btn-default(href='/localLogin')
-        span.fa.fa-user
-        |  Local Login
-      a.btn.btn-default(href='/localSignup')          
-        span.fa.fa-user
-        |  Local Signup
-    // +icon-primary("search")
-    // h1 
-    //   |Login or Register
-    // table
-    //   tbody
-    //     tr
-    //       td
-    //         form(method="get", action="/localLogin")
-    //           input(type='submit', name='name', value="Local Login")
-    //       td
-    //         form(method="get", action="/localSignup")
-    //           input(type='submit', name='name', value="Locol Signup")
+    h3 
+      |Login or Register
+    table
+      tbody
+        tr
+          td
+            form(method="get", action="/localLogin")
+              input(type='submit', value="Local Login")
+          td
+            form(method="get", action="/localSignup")
+              input(type='submit', value="Local Signup")
+          td
+            form(method="get", action="/auth/facebook")
+              input(type='submit', value="Facebook")
 

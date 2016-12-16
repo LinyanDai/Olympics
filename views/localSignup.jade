@@ -1,4 +1,4 @@
-// Jade file to specify output of a persons list
+// Jade file to specify layout of local signup page
 // Inherits from layout
 extend layout
 block navbarcontent
@@ -14,26 +14,26 @@ block navbarcontent
           +nav_item("/login") Login  
         td(width='45')
         td(width='200')
-          +nav_item("/reference") Contact Us
+          +nav_item("/question") Q & A
 block content
   p
     h5
       |  Signup
     if message.length
       .alert.alert-danger= message
-      form(action='/localSignup', method='post')
-        .form-group
-          label Email
-          input.form-control(type='text', name='email')
-        .form-group
-          label Password            
-          input.form-control(type='password', name='password')
-        button.btn.btn-warning.btn-lg(type='submit') Signup
-      hr
-      p
-        | Already have an account? 
-        a(href='/login') Login
-      p         
-        | Or go 
-        a(href='/') home
-        | .
+    form(action='/localSignup', method='post')
+      .form-group
+        label Email
+        input.form-control(type='text', name='email')
+      .form-group
+        label Password                      
+        input.form-control(type='password', name='password')
+      button.btn.btn-warning.btn-lg(type='submit') Signup
+    hr
+    p
+      | Already have an account? 
+      a(href='/login') Login
+    p         
+      | Or go 
+      a(href='/') home
+      | .

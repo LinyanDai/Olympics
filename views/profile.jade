@@ -1,4 +1,4 @@
-// Jade file to specify output of a persons list
+// Jade file to specify the welcome page after user loggingg in
 // Inherits from layout
 extend layout
 block navbarcontent
@@ -11,11 +11,33 @@ block navbarcontent
           +nav_item("/") Hompage 
         td(width='45')
         td(width='200')
-          +nav_item("/login","active") Login  
+          +nav_item("/login") Login  
         td(width='45')
         td(width='200')
-          +nav_item("/reference") Contact Us
+          +nav_item("/question") Q & A
 block content
   p
-    h5
-      | Success!
+    table
+      tbody
+        tr
+          h1
+            |Welcome! #{user.local.email} #{user.facebook.name}
+        tr
+          h5
+            |What do you want to rate?
+        tr
+          td
+            form(method="get", action="/rating")
+              input(type='submit', name="name", value="Mascot")
+          td(width=15)
+          td
+            form(method="get", action="/rating")
+              input(type='submit', name="name", value="Theme Song")
+          td(width=15)
+          td
+            form(method="get", action="/rating")
+              input(type='submit', name="name", value="Stadium")
+          td(width=50)
+          td
+            form(method="get", action="/logout")
+              input(type='submit', name="name", value="logout")

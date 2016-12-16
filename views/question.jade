@@ -1,0 +1,39 @@
+// Jade file to specify output of the Q & A page
+// Inherits from layout 
+extend layout
+// Then we produce a form that triggers /actor once
+// the user hits Submit
+var result;
+block navbarcontent
+  table
+    tbody
+      tr(height = "17")
+      tr
+        td(width = "200")
+          +nav_item("/") Homepage
+        td(width = "45")
+        td(width = "200")
+          +nav_item("/login") Login
+        td(width = "45")
+        td(width = "200")
+          +nav_item("/question", "active") Q & A
+block content
+  .container
+    p
+      form(method="get", action="/answers")
+        select(name="name")
+          option 1. Which is the first Game having a Theme Song?
+          option 2. Among all countries have not held Olympic Games, which one has won the most medals?
+          option 3. For those countries who has theme songs, which has won more than 20 golden medals?
+          option 4. Which is the first Game having a Mascot? 
+          option 5. Which Game has the most Mascots?
+          option 6. How many countries in total have hosted Olympic games?
+          option 7. Which is the country have hosted Olympic Games the most time?
+          option 8. When and where was the most recent Olympic Game held?
+          option 9. When and where will the next Olympic Games be held?
+
+      
+        input(type='submit', value='Submit')
+    p
+        h3
+          |#{result}

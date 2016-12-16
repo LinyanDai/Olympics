@@ -1,8 +1,10 @@
+// Jade file to specify the layout of homepage
 // Inherits from layout 
 extend layout
 // Then we produce a form that triggers /person once
 // the user hits Submit
 var result1,result2;
+var stories;
 block navbarcontent
 	table
 		tbody
@@ -15,7 +17,7 @@ block navbarcontent
 					+nav_item("/login") Login
 				td(width = "45")
 				td(width = "200")
-					+nav_item("/reference") Contact Us
+					+nav_item("/question")  Q & A
 block content
 	p
 	form(method="get", action="/")
@@ -23,6 +25,18 @@ block content
 			tbody
 				tr
 					td
+						table
+							tbody
+								tr(height='224')
+									td(width='700')
+										h3
+											|Do You Know?
+										h5
+											|#{stories.title}
+										h5
+											| #{stories.story}
+									form(method='use', action='/api/videos')
+										input(type='submit', name='name', value='Next Story')
 						table
 							tbody
 								tr
@@ -104,4 +118,4 @@ block content
 									td(width='300')
 										form(method='get', action='/gameInfo')
 										form(method='get', action='/gameInfo')
-											input(type='submit', name='name', value=result2[i].year+" "+result2[i].city+" "+result2[i].country, style="height:30px; width:250px")
+											input(type='submit', name='name', value=result2[i].year+" "+result2[i].city+" "+result2[i].country, style="height:30px; width:300px")
